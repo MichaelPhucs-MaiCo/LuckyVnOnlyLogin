@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "auto-login-luckyvn",
+	"version": "${version}",
+	"name": "Auto Login LuckyVN",
+	"description": "Mot ban mod tu dong dang nhap cho may chu Minecraft yeu cau xac thuc bang mat khau tai mot vi tri cu the hoac khi nhan duoc tin nhan tro chuyen",
+	"authors": [
+		"MajinBuu2k4"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/MajinBuu2k4/auto-login-luckyvn"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/auto-login-luckyvn/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.vanphuc.autologin.AutoLoginLuckyVNClient"
+		],
+		"modmenu": [
+			"com.vanphuc.autologin.ModMenuIntegration"
+		]
+	},
+	"depends": {
+      "fabricloader": ">=0.16.10",
+      "minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*",
+		"modmenu": ">=13.0.3"
+	}
+}
