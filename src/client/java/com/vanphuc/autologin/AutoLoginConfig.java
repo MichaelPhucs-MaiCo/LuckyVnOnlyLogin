@@ -17,6 +17,8 @@ public class AutoLoginConfig {
     private String firstSlotString = "22";
     private String secondSlotString = "30";
     private boolean autoClickEnabled = true;
+    private boolean showHistoryHud = true;
+    private boolean showNotifications = true;
 
     private static AutoLoginConfig instance;
 
@@ -29,6 +31,8 @@ public class AutoLoginConfig {
     }
 
     private AutoLoginConfig() {}
+
+    // --- GETTERS & SETTERS ---
 
     public String getPassword() {
         return password;
@@ -65,6 +69,26 @@ public class AutoLoginConfig {
         this.autoClickEnabled = enabled;
         save();
     }
+
+    public boolean isShowHistoryHud() {
+        return showHistoryHud;
+    }
+
+    public void setShowHistoryHud(boolean showHistoryHud) {
+        this.showHistoryHud = showHistoryHud;
+        save();
+    }
+
+    public boolean isShowNotifications() {
+        return showNotifications;
+    }
+
+    public void setShowNotifications(boolean showNotifications) {
+        this.showNotifications = showNotifications;
+        save();
+    }
+
+    // --- LOGIC LOAD/SAVE ---
 
     public static void load() {
         if (!configFile.exists()) {
