@@ -32,61 +32,25 @@ public class AutoLoginConfig {
 
     private AutoLoginConfig() {}
 
-    // --- GETTERS & SETTERS ---
+    // --- GETTERS & SETTERS (Đã lược bỏ save() để tối ưu) ---
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
 
-    public void setPassword(String password) {
-        this.password = password;
-        save();
-    }
+    public String getFirstSlotString() { return firstSlotString; }
+    public void setFirstSlotString(String firstSlotString) { this.firstSlotString = firstSlotString; }
 
-    public String getFirstSlotString() {
-        return firstSlotString;
-    }
+    public String getSecondSlotString() { return secondSlotString; }
+    public void setSecondSlotString(String secondSlotString) { this.secondSlotString = secondSlotString; }
 
-    public void setFirstSlotString(String firstSlotString) {
-        this.firstSlotString = firstSlotString;
-        save();
-    }
+    public boolean isAutoClickEnabled() { return autoClickEnabled; }
+    public void setAutoClickEnabled(boolean enabled) { this.autoClickEnabled = enabled; }
 
-    public String getSecondSlotString() {
-        return secondSlotString;
-    }
+    public boolean isShowHistoryHud() { return showHistoryHud; }
+    public void setShowHistoryHud(boolean showHistoryHud) { this.showHistoryHud = showHistoryHud; }
 
-    public void setSecondSlotString(String secondSlotString) {
-        this.secondSlotString = secondSlotString;
-        save();
-    }
-
-    public boolean isAutoClickEnabled() {
-        return autoClickEnabled;
-    }
-
-    public void setAutoClickEnabled(boolean enabled) {
-        this.autoClickEnabled = enabled;
-        save();
-    }
-
-    public boolean isShowHistoryHud() {
-        return showHistoryHud;
-    }
-
-    public void setShowHistoryHud(boolean showHistoryHud) {
-        this.showHistoryHud = showHistoryHud;
-        save();
-    }
-
-    public boolean isShowNotifications() {
-        return showNotifications;
-    }
-
-    public void setShowNotifications(boolean showNotifications) {
-        this.showNotifications = showNotifications;
-        save();
-    }
+    public boolean isShowNotifications() { return showNotifications; }
+    public void setShowNotifications(boolean showNotifications) { this.showNotifications = showNotifications; }
 
     // --- LOGIC LOAD/SAVE ---
 
