@@ -14,8 +14,8 @@ public class AutoLoginConfig {
     private static final File configFile = new File(FabricLoader.getInstance().getConfigDir().toFile(), "auto_login_luckyvn.json");
 
     private String password = "";
-    private String firstSlotString = "22";
-    private String secondSlotString = "30";
+    private String firstSlotString = "20"; //Cụm SKYBLOCK
+    private String secondSlotString = "22"; //SKY ENERGY
     private boolean autoClickEnabled = true;
     private boolean showHistoryHud = true;
     private boolean showNotifications = true;

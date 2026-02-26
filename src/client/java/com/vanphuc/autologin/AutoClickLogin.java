@@ -40,8 +40,8 @@ public class AutoClickLogin {
             this.firstSlot = Integer.parseInt(config.getFirstSlotString());
             this.secondSlot = Integer.parseInt(config.getSecondSlotString());
         } catch (Exception e) {
-            this.firstSlot = 13;
-            this.secondSlot = 22;
+            this.firstSlot = 20; //Cụm SKYBLOCK
+            this.secondSlot = 22; //SKY ENERGY
         }
     }
 
@@ -52,7 +52,7 @@ public class AutoClickLogin {
         stateStartTime = System.currentTimeMillis();
         lastGlobalRetryTime = System.currentTimeMillis(); // Bắt đầu tính 1 phút
         lastActionTime = System.currentTimeMillis();
-        ChatUtils.addModMessage("🎯 Khởi động vòng lặp (Chống treo hub: Bật)");
+        ChatUtils.addModMessage("🎯 Khởi động vòng lặp");
     }
 
     private void onTick(MinecraftClient client) {
@@ -93,18 +93,17 @@ public class AutoClickLogin {
                 }
                 break;
 
-            case 2: // CLICK CHỌN MÁY CHỦ (VD: SLOT 13)
+            case 2: // CLICK CHỌN MÁY CHỦ (VD: SLOT 20)
                 handleMenuClick(now, firstSlot, 3, "NETWORK");
                 break;
 
             case 3: // CLICK VÀO CỤM (VD: SLOT 22)
-                handleMenuClick(now, secondSlot, 4, "TU TIÊN");
+                handleMenuClick(now, secondSlot, 4, "SKYBLOCK");
                 break;
 
             case 4: // ĐỢI TELEPORT (CHECK TỌA ĐỘ)
                 // Nếu X thoát khỏi vùng Lobby (-279)
                 if (mc.player.getX() > -100) {
-                    ChatUtils.addModMessage("✨ Đã vào Thiên Nguyên Thành! Bot dừng.");
                     currentState = 0;
                     // PostLoginManager.start(); <-- Đã bay màu! 🕊️
                 }

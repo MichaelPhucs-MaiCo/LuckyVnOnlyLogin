@@ -22,7 +22,7 @@ public class AutoLoginLuckyVNClient implements ClientModInitializer {
     private long lastLoginAttemptTime = 0;
     private final long loginDelayMillis = 5_000;
 
-    private final BlockPos LOGIN_POS = new BlockPos(-279, 39, 468);
+    private final BlockPos LOGIN_POS = new BlockPos(-279, 39, 468); //này là tọa độ sảnh nơi gửi lệnh /login và click gui
     private final double TOLERANCE = 1.5;
 
     // PHÍM TẮT XEM LỊCH SỬ LOG ⌨️
